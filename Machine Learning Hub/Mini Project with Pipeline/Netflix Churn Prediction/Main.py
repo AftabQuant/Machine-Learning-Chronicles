@@ -5,9 +5,11 @@ import pandas as pd
 import warnings 
 warnings.filterwarnings('ignore')
 
+
 def load_model() :
     model = joblib.load('model.pkl')
     return model
+
 
 def prediction(age, gender, subscription_type, watch_hours, last_login_days,	
            region, device, monthly_fee, payment_method, number_of_profiles, avg_watch_time_per_day, favorite_genre):
@@ -21,6 +23,7 @@ def prediction(age, gender, subscription_type, watch_hours, last_login_days,
     pipeline = load_model()
     prediction = pipeline.predict(input_data)
     return prediction[0]
+
 
 demo = gr.Interface(
     fn=prediction,
