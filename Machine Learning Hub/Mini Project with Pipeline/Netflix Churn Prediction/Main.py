@@ -14,8 +14,8 @@ def load_model() :
 def prediction(age, gender, subscription_type, watch_hours, last_login_days,	
            region, device, monthly_fee, payment_method, number_of_profiles, avg_watch_time_per_day, favorite_genre):
 
-    columns = [	'age',	'gender',	'subscription_type',	'watch_hours',	'last_login_days',	
-           'region',	'device',	'monthly_fee',	'payment_method',	'number_of_profiles',	'avg_watch_time_per_day'	,'favorite_genre']
+    columns = ['age', 'gender', 'subscription_type', 'watch_hours', 'last_login_days',	
+           'region', 'device', 'monthly_fee', 'payment_method', 'number_of_profiles', 'avg_watch_time_per_day', 'favorite_genre']
     
     input_data = pd.DataFrame([[age, gender, subscription_type, watch_hours, last_login_days,
                                 region, device, monthly_fee, payment_method, number_of_profiles, avg_watch_time_per_day, favorite_genre]],
